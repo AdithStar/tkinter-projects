@@ -1,0 +1,32 @@
+import tkinter
+screen = tkinter.Tk()
+screen.geometry("500x350")
+screen.title("Converter")
+label = tkinter.Label(screen,text = "Enter the weight in kg")
+label1 = tkinter.Label(screen,text = "Grams")
+label2 = tkinter.Label(screen,text = "Pounds")
+label3 = tkinter.Label(screen,text = "Ounce")
+label4 = tkinter.Label(screen,text = "")
+label5 = tkinter.Label(screen,text = "")
+label6 = tkinter.Label(screen,text = "")
+entry = tkinter.Entry(screen)
+def function():
+    button.config(bg = "grey", fg = "green")
+    kilograms = float(entry.get())
+    Grams = kilograms*1000
+    Pounds = kilograms*2.205
+    Ounces = kilograms*35.274
+    label4.config(text = Grams)
+    label5.config(text = Pounds)
+    label6.config(text = Ounces)
+button = tkinter.Button(screen,text = "Convert", command = function)
+label.grid(row = 1, column = 1)
+entry.grid(row = 1, column = 2)
+button.grid(row = 1, column = 3)
+label1.grid(row = 2, column = 1)
+label2.grid(row = 2, column = 2)
+label3.grid(row = 2, column = 3)
+label4.grid(row = 3, column = 1)
+label5.grid(row = 3, column = 2)
+label6.grid(row = 3, column = 3)
+screen.mainloop()
